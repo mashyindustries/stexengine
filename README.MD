@@ -1,4 +1,4 @@
-##Setup
+## Setup
 
 ```
 var StexEngine = require('stexengine')
@@ -11,7 +11,7 @@ var engine = StexEngine(config)
 
 ```
 
-##Views
+## Views
 
 In your view directory, you can seperate view types with folders such as:
 
@@ -21,7 +21,7 @@ views/pages
 views/layouts
 ```
 
-###Defining a layout
+### Defining a layout
 `layouts/app.stex`
 
 ```
@@ -40,7 +40,7 @@ views/layouts
 <html>
 ```
 
-###Extending a layout
+### Extending a layout
 'pages/home.stex`
 
 ```
@@ -55,7 +55,7 @@ views/layouts
 @endsection
 ```
 
-###Returning a view
+### Returning a view
 ```
 engine.render('pages/home');
 ```
