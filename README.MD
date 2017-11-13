@@ -41,7 +41,7 @@ views/layouts
 ```
 
 ### Extending a layout
-'pages/home.stex`
+`pages/home.stex`
 
 ```
 @extend('layouts/app')
