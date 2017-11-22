@@ -1,19 +1,29 @@
-## Setup
+# Setup
 
 ```
 var StexEngine = require('stexengine')
 
 var config = {
-    directory: //view directory
+    basedir: *views directory*
 }
 
 var engine = StexEngine(config)
 
 ```
 
+## Rendering a view
+
+```
+engine.render('pages/home');
+
+engine.render('pages/home', {"title": "Hello World"});
+```
+
 ## Views
 
-In your view directory, you can seperate view types with folders such as:
+### View Structure
+
+In your view directory, we recommend seperating view types with folders as shown below:
 
 ```
 views/includes
@@ -22,7 +32,7 @@ views/layouts
 ```
 
 ### Defining a layout
-`layouts/app.stex`
+`layouts/master.stex`
 
 ```
 <html>
@@ -41,7 +51,7 @@ views/layouts
 ```
 
 ### Extending a layout
-'pages/home.stex`
+`pages/home.stex`
 
 ```
 @extend('layouts/app')
@@ -55,7 +65,14 @@ views/layouts
 @endsection
 ```
 
-### Returning a view
+### Including Sections
+`includes/header.stex`
 ```
-engine.render('pages/home');
+<header>This is a Header</header>
+```
+`Using in a view`
+```
+...
+@includes('includes.header')
+...
 ```

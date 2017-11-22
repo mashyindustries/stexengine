@@ -1,0 +1,10 @@
+@extends('layouts.master')
+
+@section('title', 'test')
+
+@section('content')
+    <img src="@url('lala\sdsd')">
+    <div>
+        Some Content
+    </div>
+@endsection

@@ -1,0 +1,8 @@
+<div>
+    @includes('includes.header')
+    <h1>@yield('title')</h1>
+
+    <div>
+        @yield('content')
+    </div>
+</div>
