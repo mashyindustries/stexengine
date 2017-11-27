@@ -147,6 +147,7 @@ function readFile(path, val, parent){
             var inparent = parent ? "in view: \"" + parent + "\" " : ""
             var errormessage = "View: \"" + val + "\" " + inparent + "not found"
             e = Error(errormessage)
+            e.code = "VIEW_NOT_FOUND"
         }
         throw e;
     }
